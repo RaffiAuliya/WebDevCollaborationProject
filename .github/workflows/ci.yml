@@ -1,0 +1,40 @@
+name: CI Workflow
+
+# Menentukan kapan workflow akan berjalan
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+# Mendefinisikan job yang akan dijalankan
+jobs:
+  build:
+
+    # Menjalankan di lingkungan Ubuntu terbaru
+    runs-on: ubuntu-latest
+
+    steps:
+      # Langkah 1: Checkout kode dari repositori
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Langkah 2: Setup environment Node.js (ganti jika tidak menggunakan Node.js)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'  # Sesuaikan dengan versi Node.js
+
+      # Langkah 3: Install dependencies
+      - name: Install dependencies
+        run: npm install  # Sesuaikan dengan package manager Anda
+
+      # Langkah 4: Jalankan tes (sesuaikan dengan framework pengujian)
+      - name: Run tests
+        run: npm test
+
+      # Langkah 5: Build proyek (opsional)
+      - name: Build project
+        run: npm run build  # Ganti jika ada proses build lain
