@@ -1,79 +1,78 @@
-
 /* Navbar Styles */
 .navbar {
-	display: flex;
-	justify-content: space-between; /* Logo di kiri, link di kanan */
-	align-items: center;
-	background-color: #ffcc00;
-	padding: 20px;
-	color: #fff;
+	display: flex; /* Menggunakan flexbox untuk tata letak yang responsif */
+	justify-content: space-between; /* Logo diatur di kiri, link navigasi di kanan */
+	align-items: center; /* Vertikal rata tengah untuk elemen di dalam navbar */
+	background-color: #ffcc00; /* Warna latar belakang kuning pada navbar */
+	padding: 20px; /* Ruang di sekitar konten navbar */
+	color: #fff; /* Warna teks default putih */
 }
 
 /* Styling untuk bagian logo dan teks */
 .navbar-logo-group {
-	display: flex;
-	align-items: center;
+	display: flex; /* Flexbox untuk memastikan logo dan teks disusun secara horizontal */
+	align-items: center; /* Vertikal rata tengah antara logo dan teks */
 }
 
 .navbar-logo {
-	width: 80px; /* Atur ukuran logo sesuai kebutuhan */
-	height: auto;
-	margin-right: 10px; /* Beri jarak antara logo dan teks */
+	width: 80px; /* Lebar logo ditetapkan agar proporsional */
+	height: auto; /* Otomatis sesuaikan tinggi logo sesuai proporsi lebar */
+	margin-right: 10px; /* Jarak antara logo dan teks */
 }
 
 .navbar-title {
-	font-size: 18px;
-	font-weight: bold;
-	color: #333;
+	font-size: 18px; /* Ukuran font untuk judul navbar */
+	font-weight: bold; /* Menjadikan teks judul tebal */
+	color: #333; /* Warna teks judul navbar (abu-abu gelap) */
 }
 
 /* Styling untuk link navigasi */
 .navbar-list-group a {
-	color: #333;
-	text-decoration: none;
-	margin-right: 15px;
-	font-size: 16px;
+	color: #333; /* Warna link navigasi (abu-abu gelap) */
+	text-decoration: none; /* Menghilangkan garis bawah pada link */
+	margin-right: 15px; /* Jarak antar link navigasi */
+	font-size: 16px; /* Ukuran font untuk link navigasi */
 }
 
 /* Optional: Tambahkan hover effect untuk link */
 .navbar-list-group a:hover {
-	text-decoration: underline;
+	text-decoration: underline; /* Garis bawah muncul saat link di-hover */
 }
 
 /* WhatsApp Button */
 .float {
-	position: fixed;
-	width: 60px;
-	height: 60px;
-	bottom: 40px;
-	right: 40px;
-	background-color: #25d366;
-	color: #FFF;
-	border-radius: 50px;
-	text-align: center;
-	font-size: 30px;
-	box-shadow: 2px 2px 3px #999;
-	z-index: 100;
+	position: fixed; /* Tombol tetap di tempat meskipun halaman di-scroll */
+	width: 60px; /* Lebar tombol */
+	height: 60px; /* Tinggi tombol */
+	bottom: 40px; /* Jarak dari bagian bawah layar */
+	right: 40px; /* Jarak dari sisi kanan layar */
+	background-color: #25d366; /* Warna hijau khas WhatsApp */
+	color: #FFF; /* Warna teks putih pada tombol */
+	border-radius: 50px; /* Membuat tombol menjadi bulat */
+	text-align: center; /* Teks di dalam tombol rata tengah */
+	font-size: 30px; /* Ukuran font untuk teks atau ikon dalam tombol */
+	box-shadow: 2px 2px 3px #999; /* Menambahkan bayangan pada tombol */
+	z-index: 100; /* Menjaga tombol tetap di atas elemen lainnya */
 }
 .my-float {
-	margin-top: 16px;
+	margin-top: 16px; /* Memberi jarak vertikal untuk menyeimbangkan konten di dalam tombol */
 }
 
 /* Footer */
 .footer {
-background-color: #3E2723;
-color: #fff;
-text-align: center;
-padding: 20px;
+	background-color: #3E2723; /* Warna latar belakang cokelat tua */
+	color: #fff; /* Warna teks putih untuk kontras */
+	text-align: center; /* Teks di tengah secara horizontal */
+	padding: 20px; /* Memberi ruang di sekitar konten footer */
 }
 
 .footer a {
-color: #FFAB91;
-text-decoration: none;
-margin-right: 15px;
+	color: #FFAB91; /* Warna link di dalam footer (oranye muda) */
+	text-decoration: none; /* Menghilangkan garis bawah pada link */
+	margin-right: 15px; /* Jarak antar link di footer */
 }
 
 .footer span {
-display: block;
-margin-top: 10px;
+	display: block; /* Menjadikan elemen span tampil sebagai blok */
+	margin-top: 10px; /* Memberi jarak vertikal antara elemen span dan konten lainnya */
 }
