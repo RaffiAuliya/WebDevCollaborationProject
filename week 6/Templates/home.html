@@ -7,6 +7,7 @@
   <title>HonoCafe</title>
   
   <!-- Integrasi CSS -->
+  <link rel="stylesheet" href="../Static/css/style.css">
   <style>
     * {
       margin: 0;
@@ -21,22 +22,6 @@
       background-color: #f8f9fa;
     }
 
-    /* Navbar */
-    .navbar {
-      display: flex;
-      justify-content: flex-end; /* Sesuaikan untuk menghapus logo kiri */
-      align-items: center;
-      background-color: #3E2723;
-      padding: 20px;
-      color: #fff;
-    }
-
-    .navbar-list-group a {
-      color: #fff;
-      text-decoration: none;
-      margin-right: 15px;
-      font-size: 16px;
-    }
 
     /* Hero Section */
     .hero {
@@ -172,12 +157,18 @@
 
   <!-- Navbar -->
   <nav class="navbar">
+    <!-- Bagian kiri untuk logo dan teks HonoCafe -->
+    <div class="navbar-logo-group">
+        <img src="../Static/images/logo.png" alt="HonoCafe Logo" class="navbar-logo">
+        <span class="navbar-title">HonoCafe</span>
+    </div>
+    
     <div class="navbar-list-group">
-      <a href="#home">Home</a>
-      <a href="#about">Tentang</a>
-      <a href="#menu">Menu</a>
-      <a href="#contact">Hubungi Kami</a>
-      <a href="#download">Download Apps</a>
+      <a href="home.html">Home</a>
+      <a href="index.html#about">Tentang</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Hubungi Kami</a>
+      <a href="download.html">Download Apps</a>   
     </div>
   </nav>
 

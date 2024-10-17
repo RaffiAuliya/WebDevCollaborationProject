@@ -1,3 +1,79 @@
-h1{
-	color : blue;
+
+/* Navbar Styles */
+.navbar {
+	display: flex;
+	justify-content: space-between; /* Logo di kiri, link di kanan */
+	align-items: center;
+	background-color: #ffcc00;
+	padding: 20px;
+	color: #fff;
+}
+
+/* Styling untuk bagian logo dan teks */
+.navbar-logo-group {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-logo {
+	width: 80px; /* Atur ukuran logo sesuai kebutuhan */
+	height: auto;
+	margin-right: 10px; /* Beri jarak antara logo dan teks */
+}
+
+.navbar-title {
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+}
+
+/* Styling untuk link navigasi */
+.navbar-list-group a {
+	color: #333;
+	text-decoration: none;
+	margin-right: 15px;
+	font-size: 16px;
+}
+
+/* Optional: Tambahkan hover effect untuk link */
+.navbar-list-group a:hover {
+	text-decoration: underline;
+}
+
+/* WhatsApp Button */
+.float {
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	bottom: 40px;
+	right: 40px;
+	background-color: #25d366;
+	color: #FFF;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 30px;
+	box-shadow: 2px 2px 3px #999;
+	z-index: 100;
+}
+.my-float {
+	margin-top: 16px;
+}
+
+/* Footer */
+.footer {
+background-color: #3E2723;
+color: #fff;
+text-align: center;
+padding: 20px;
+}
+
+.footer a {
+color: #FFAB91;
+text-decoration: none;
+margin-right: 15px;
+}
+
+.footer span {
+display: block;
+margin-top: 10px;
 }
