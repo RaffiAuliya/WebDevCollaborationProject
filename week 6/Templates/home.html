@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HonoCafe</title>
+  
+  <!-- Integrasi CSS -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: flex-end; /* Sesuaikan untuk menghapus logo kiri */
+      align-items: center;
+      background-color: #3E2723;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .navbar-list-group a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 15px;
+      font-size: 16px;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+      background-color: #fff;
+      background-image: url('../Static/images/honocafe-background.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 600px; /* Perkecil tinggi hero */
+    }
+
+    .hero .content {
+      max-width: 50%;
+    }
+
+    .hero h1 {
+      font-size: 36px; /* Perkecil ukuran teks */
+      color: #3E2723;
+    }
+
+    .hero p {
+      font-size: 18px; /* Perkecil ukuran deskripsi */
+      margin-top: 20px;
+      color: #795548;
+    }
+
+    /* About Section */
+    .about {
+      padding: 50px;
+      background-color: #fff;
+    }
+
+    .about h2 {
+      text-align: center;
+      font-size: 30px; /* Perkecil ukuran teks */
+      color: #3E2723;
+      margin-bottom: 30px;
+    }
+
+    .about-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .about-content {
+      max-width: 50%;
+    }
+
+    .about-image img {
+      width: 500px; /* Sesuaikan ukuran gambar */
+      height: auto;
+    }
+
+    .about-content h3 {
+      font-size: 24px; /* Perkecil ukuran judul */
+      color: #795548;
+    }
+
+    .about-content p {
+      font-size: 16px;
+      margin: 20px 0;
+      color: #5D4037;
+    }
+
+    /* Menu Section */
+    .menu {
+      padding: 50px;
+      background-color: #fafafa;
+    }
+
+    .menu h2 {
+      text-align: center;
+      font-size: 30px; /* Perkecil ukuran judul */
+      color: #3E2723;
+      margin-bottom: 30px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .menu-item {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .menu-item img {
+      width: 100%; /* Sesuaikan gambar sesuai lebar item */
+      height: auto; /* Otomatis sesuai aspek rasio */
+    }
+
+    .menu-item h3 {
+      font-size: 20px; /* Perkecil ukuran teks */
+      margin-top: 20px;
+      color: #795548;
+    }
+
+    .menu-item p {
+      font-size: 14px; /* Perkecil ukuran deskripsi */
+      margin: 20px 0;
+      color: #5D4037;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #3E2723;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer a {
+      color: #FFAB91;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    .footer span {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-list-group">
+      <a href="#home">Home</a>
+      <a href="#about">Tentang</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Hubungi Kami</a>
+      <a href="#download">Download Apps</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h1>HonoCafe Indonesia</h1>
+      <p>Tempat yang Tenang dan Nyaman untuk Menikmati Kopi Berkualitas Tinggi</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>Cerita Tentang <span>HonoCafe</span></h2>
+    <div class="about-container">
+      <div class="about-content">
+        <h3>HonoCafe Surabaya</h3>
+        <p>Jl. Dr. Ir. H. Soekarno No. 679, Rungkut, Surabaya.</p>
+        <p>Cerita dimulai ketika seorang wanita muda bernama Isabelle, atau Belle, memutuskan untuk membangun kafe tersebut di kota kecil tempat kelahirannya. Dia adalah seorang pecinta seni dan budaya, dan dia ingin menciptakan tempat di mana orang-orang bisa berkumpul, berbagi cerita, dan menikmati keindahan hidup.</p>
+        <p>Ketika matahari terbenam pada akhir minggu, Hono Cafe dipenuhi oleh tawa, musik, dan kebahagiaan. Acara tersebut tidak hanya mengumpulkan dana yang cukup untuk proyek taman bermain, tetapi juga menyatukan lebih erat lagi komunitas tersebut.</p>
+      </div>
+      <div class="about-image">
+        <img src="../Static/images/honocafe-about.jpg" alt="Cerita Tentang HonoCafe">
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <h2>Menu <span>Unggulan</span></h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="../Static/images/cappuccino.jpg" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Cappuccino adalah minuman kopi yang terdiri dari espresso, susu panas, dan busa susu. Biasanya disajikan dalam cangkir kecil dan memiliki lapisan atas berupa busa susu yang lembut.</p>
+      </div>
+      <div class="menu-item">
+        <img src="../Static/images/chocolate.jpg" alt="Coklat HonoCafe">
+        <h3>Coklat HonoCafe</h3>
+        <p>Minuman coklat adalah minuman hangat atau es yang dibuat dari cokelat bubuk atau cokelat batangan yang dilelehkan dalam susu atau air panas. Memiliki rasa manis dan kaya.</p>
+      </div>
+      <div class="menu-item">
+        <img src="../Static/images/redvelvet.jpg" alt="Red Velvet">
+        <h3>Red Velvet</h3>
+        <p>Minuman Red Velvet adalah minuman yang terinspirasi dari kue Red Velvet. Minuman ini memiliki warna merah muda yang khas, dengan rasa manis dan sedikit asam.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">Tentang</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Hubungi Kami</a>
+      <a href="#download">Download Apps</a>
+    </div>
+    <span>created by <a href="KELOMPOK IV" target="_blank">KELOMPOK IV</a> | © 2024 HONOCAFE INDONESIA. All Rights Reserved</span>
+  </footer>
+
+</body>
+</html>

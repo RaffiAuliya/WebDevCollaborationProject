@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Aplikasi</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container-download {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        .download-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .download-links img {
+            width: 150px;
+            height: auto;
+        }
+        .container-download h1 {
+            color: rgb(11, 125, 108);
+        }
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* Logo di kiri, link di kanan */
+            align-items: center;
+            background-color: #d67c06;
+            padding: 20px;
+            color: #fff;
+        }
+
+        /* Styling untuk bagian logo dan teks */
+        .navbar-logo-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            width: 80px; /* Atur ukuran logo sesuai kebutuhan */
+            height: auto;
+            margin-right: 10px; /* Beri jarak antara logo dan teks */
+        }
+
+        .navbar-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* Styling untuk link navigasi */
+        .navbar-list-group a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 15px;
+            font-size: 16px;
+        }
+
+        /* Optional: Tambahkan hover effect untuk link */
+        .navbar-list-group a:hover {
+            text-decoration: underline;
+        }
+
+        /* WhatsApp Button */
+        .float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+        .my-float {
+            margin-top: 16px;
+        }
+
+        /* Footer */
+        .footer {
+        background-color: #3E2723;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        }
+
+        .footer a {
+        color: #FFAB91;
+        text-decoration: none;
+        margin-right: 15px;
+        }
+
+        .footer span {
+        display: block;
+        margin-top: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Bagian kiri untuk logo dan teks HonoCafe -->
+        <div class="navbar-logo-group">
+            <img src="../Static/images/logo.png" alt="HonoCafe Logo" class="navbar-logo">
+            <span class="navbar-title">HonoCafe</span>
+        </div>
+    
+        <!-- Bagian kanan untuk link navigasi -->
+        <div class="navbar-list-group">
+            <a href="#home">Home</a>
+            <a href="#about">Tentang</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Hubungi Kami</a>
+            <a href="#download">Download Apps</a>
+        </div>
+    </nav>
+    
+    
+    <!-- Main content -->
+    <div class="container-download">
+        <h5>HONO CAFE APLICATION MOBILE</h5>
+        <h1>Cepat, Mudah dan Terpercaya dengan Banyak Kemudahan</h1>
+        <h5>Nikmati pengalaman ngopi dengan penawaran spesial. Ngopi enak dengan rasa autentik khas nusantara! Pesan di aplikasi kami dan lewati antrian. Gampang, bukan?</h5>
+        <div class="download-links">
+            <a href="https://drive.google.com/file/d/1cCIk8Nt-xsvcDBVJjn1ksYtuzJGZ0K5_/view?usp=sharing">
+                <img src="../Static/images/play_store.png" alt="Download di Google Play Store">
+            </a>
+            <a href="https://drive.google.com/file/d/1cCIk8Nt-xsvcDBVJjn1ksYtuzJGZ0K5_/view?usp=sharing">
+                <img src="../Static/images/app_store.png" alt="Download di App Store">
+            </a>
+        </div>
+        <img src="../Static/images/banner_download.png" alt="">
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+    <script src="script.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+          <a href="#home">Home</a>
+          <a href="#about">Tentang</a>
+          <a href="#menu">Menu</a>
+          <a href="#contact">Hubungi Kami</a>
+          <a href="#download">Download Apps</a>
+        </div>
+        <span>created by <a href="KELOMPOK IV" target="_blank">KELOMPOK IV</a> | © 2024 HONOCAFE INDONESIA. All Rights Reserved</span>
+      </footer>
+</body>
+</html>
