@@ -4,7 +4,7 @@
 	justify-content: space-between; /* Logo diatur di kiri, link navigasi di kanan */
 	align-items: center; /* Vertikal rata tengah untuk elemen di dalam navbar */
 	background-color: #ffcc00; /* Warna latar belakang kuning pada navbar */
-	padding: 20px; /* Ruang di sekitar konten navbar */
+	padding: 2px; /* Ruang di sekitar konten navbar */
 	color: #fff; /* Warna teks default putih */
 }
 
