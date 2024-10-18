@@ -7,7 +7,7 @@
   <title>HonoCafe</title>
   
   <!-- Integrasi CSS -->
-  <link rel="stylesheet" href="../Static/css/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
   <style>
     * {
       margin: 0;
@@ -30,7 +30,7 @@
       justify-content: space-between;
       padding: 50px;
       background-color: #fff;
-      background-image: url('../Static/images/honocafe-background.jpg');
+      background-image: url('{{ url_for('static', filename='images/honocafe-background.jpg') }}');
       background-size: cover;
       background-position: center;
       height: 600px; /* Perkecil tinggi hero */
@@ -159,16 +159,16 @@
   <nav class="navbar">
     <!-- Bagian kiri untuk logo dan teks HonoCafe -->
     <div class="navbar-logo-group">
-        <img src="../Static/images/logo.png" alt="HonoCafe Logo" class="navbar-logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HonoCafe Logo" class="navbar-logo">
         <span class="navbar-title">HonoCafe</span>
     </div>
     
     <div class="navbar-list-group">
-      <a href="home.html">Home</a>
-      <a href="about.html">Tentang</a>
-      <a href="menu.html">Menu</a>
-      <a href="contact.html">Hubungi Kami</a>
-      <a href="download.html">Download Apps</a>   
+      <a href="http://127.0.0.1:5000/">Home</a>
+      <a href="http://127.0.0.1:5000/about">Tentang</a>
+      <a href="http://127.0.0.1:5000/menu">Menu</a>
+      <a href="http://127.0.0.1:5000/contact">Hubungi Kami</a>
+      <a href="http://127.0.0.1:5000/downloads">Download Apps</a>   
     </div>
   </nav>
 
@@ -191,7 +191,7 @@
         <p>Ketika matahari terbenam pada akhir minggu, Hono Cafe dipenuhi oleh tawa, musik, dan kebahagiaan. Acara tersebut tidak hanya mengumpulkan dana yang cukup untuk proyek taman bermain, tetapi juga menyatukan lebih erat lagi komunitas tersebut.</p>
       </div>
       <div class="about-image">
-        <img src="../Static/images/honocafe-about.jpg" alt="Cerita Tentang HonoCafe">
+        <img src="{{ url_for('static', filename='images/honocafe-about.jpg')}}" alt="Cerita Tentang HonoCafe">
       </div>
     </div>
   </section>
@@ -201,17 +201,17 @@
     <h2>Menu <span>Unggulan</span></h2>
     <div class="menu-grid">
       <div class="menu-item">
-        <img src="../Static/images/coffee.jpg" alt="Hono Cafe">
+        <img src=".{{ url_for('static', filename='images/coffee.jpg')}}" alt="Hono Cafe">
         <h3>Signature black coffee</h3>
         <p>Nikmati kehangatan secangkir kopi yang diracik khusus dari biji kopi pilihan terbaik. Dengan aroma yang menggugah selera dan rasa yang kaya, Hono Cafe Coffee memberikan keseimbangan sempurna antara kekuatan dan kelembutan. Cocok dinikmati kapan saja, terutama untuk mengisi hari yang sibuk atau sebagai teman bersantai. Satu tegukan saja, kamu akan merasakan kenikmatan yang tiada duanya.</p>
       </div>
       <div class="menu-item">
-        <img src="../Static/images/iced-matcha-latte.jpg" alt="Hono Matcha">
+        <img src="{{ url_for('static', filename='images/iced-matcha-latte.jpg')}}" alt="Hono Matcha">
         <h3>Matcha latte</h3>
         <p>Segarkan hari Anda dengan Hono Matcha Latte, campuran sempurna antara matcha berkualitas tinggi dan susu segar yang creamy. Dengan setiap tegukan, nikmati rasa autentik matcha yang kaya akan antioksidan, menenangkan dan memberikan energi alami. Matcha Latte kami adalah pilihan ideal untuk pecinta teh hijau yang menginginkan rasa klasik dengan sentuhan modern. Dapatkan kehangatan dan ketenangan dalam satu cangkir.</p>
       </div>
       <div class="menu-item">
-        <img src="../Static/images/fruit-punch.jpg" alt="Hono Fruit Punch">
+        <img src="{{ url_for('static', filename='images/fruit-punch.jpg')}}" alt="Hono Fruit Punch">
         <h3>Fresh fruit punch</h3>
         <p>Temukan kesegaran buah-buahan tropis dalam segelas Hono Fruit Punch! Minuman ini memadukan berbagai buah segar dengan cita rasa manis dan asam yang sempurna. Kombinasi segar ini tidak hanya menyegarkan tetapi juga menyehatkan, penuh dengan vitamin dan energi alami. Cocok dinikmati saat cuaca panas, Hono Fruit Punch adalah minuman terbaik untuk membuat harimu lebih cerah dan semangat.</p>
       </div>
@@ -221,11 +221,11 @@
   <!-- Footer -->
   <footer class="footer">
     <div>
-      <a href="#home">Home</a>
-      <a href="#about">Tentang</a>
-      <a href="#menu">Menu</a>
-      <a href="#contact">Hubungi Kami</a>
-      <a href="#download">Download Apps</a>
+      <a href="http://127.0.0.1:5000/">Home</a>
+      <a href="http://127.0.0.1:5000/about">Tentang</a>
+      <a href="http://127.0.0.1:5000/menu">Menu</a>
+      <a href="http://127.0.0.1:5000/contact">Hubungi Kami</a>
+      <a href="http://127.0.0.1:5000/downloads">Download Apps</a>
     </div>
     <span>created by <a href="KELOMPOK IV" target="_blank">KELOMPOK IV</a> | © 2024 HONOCAFE INDONESIA. All Rights Reserved</span>
   </footer>

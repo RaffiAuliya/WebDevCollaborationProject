@@ -33,7 +33,7 @@
             
         }
     </style>
-    <link rel="stylesheet" href="../Static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -41,17 +41,17 @@
     <nav class="navbar">
         <!-- Bagian kiri untuk logo dan teks HonoCafe -->
         <div class="navbar-logo-group">
-            <img src="../Static/images/logo.png" alt="HonoCafe Logo" class="navbar-logo">
+            <img src="{{ url_for('static', filename='images/logo.png')}}" alt="HonoCafe Logo" class="navbar-logo">
             <span class="navbar-title">HonoCafe</span>
         </div>
     
         <!-- Bagian kanan untuk link navigasi -->
         <div class="navbar-list-group">
-            <a href="home.html">Home</a>
-            <a href="about.html">Tentang</a>
-            <a href="menu.html">Menu</a>
-            <a href="contact.html">Hubungi Kami</a>
-            <a href="download.html">Download Apps</a>            
+            <a href="http://127.0.0.1:5000/">Home</a>
+            <a href="http://127.0.0.1:5000/about">Tentang</a>
+            <a href="http://127.0.0.1:5000/menu">Menu</a>
+            <a href="http://127.0.0.1:5000/contact">Hubungi Kami</a>
+            <a href="http://127.0.0.1:5000/downloads">Download Apps</a>        
         </div>
     </nav>
     
@@ -63,13 +63,13 @@
         <p>Nikmati pengalaman ngopi dengan penawaran spesial. Ngopi enak dengan rasa autentik khas nusantara! Pesan di aplikasi kami dan lewati antrian. Gampang, bukan?</p>
         <div class="download-links">
             <a href="https://drive.google.com/file/d/1cCIk8Nt-xsvcDBVJjn1ksYtuzJGZ0K5_/view?usp=sharing">
-                <img src="../Static/images/play_store.png" alt="Download di Google Play Store">
+                <img src="{{ url_for('static', filename='images/play_store.png')}}" alt="Download di Google Play Store">
             </a>
             <a href="https://drive.google.com/file/d/1cCIk8Nt-xsvcDBVJjn1ksYtuzJGZ0K5_/view?usp=sharing">
-                <img src="../Static/images/app_store.png" alt="Download di App Store">
+                <img src="{{ url_for('static', filename='images/app_store.png')}}" alt="Download di App Store">
             </a>
         </div>
-        <img src="../Static/images/banner_download.png" alt="">
+        <img src="{{ url_for('static', filename='images/banner_download.png')}}" alt="">
     </div>
 
     <!-- WhatsApp Button -->
@@ -82,11 +82,11 @@
     <!-- Footer -->
     <footer class="footer">
         <div>
-          <a href="#home">Home</a>
-          <a href="#about">Tentang</a>
-          <a href="#menu">Menu</a>
-          <a href="#contact">Hubungi Kami</a>
-          <a href="#download">Download Apps</a>
+            <a href="http://127.0.0.1:5000/">Home</a>
+            <a href="http://127.0.0.1:5000/about">Tentang</a>
+            <a href="http://127.0.0.1:5000/menu">Menu</a>
+            <a href="http://127.0.0.1:5000/contact">Hubungi Kami</a>
+            <a href="http://127.0.0.1:5000/downloads">Download Apps</a>
         </div>
         <span>created by <a href="KELOMPOK IV" target="_blank">KELOMPOK IV</a> | © 2024 HONOCAFE INDONESIA. All Rights Reserved</span>
       </footer>

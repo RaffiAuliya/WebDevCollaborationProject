@@ -3,15 +3,23 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('home.html')
 
-@app.route('/profile')
-def profil():
-    return render_template('profil_raffi.html')
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 @app.route('/contact')
 def contact():
-    return 'hubungi kami'
+    return render_template('contact.html')
+
+@app.route('/menu')
+def menu():
+    return render_template('menu.html')
+
+@app.route('/downloads')
+def download():
+    return render_template('download.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

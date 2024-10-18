@@ -7,7 +7,7 @@
   <title>About HonoCafe</title>
   
   <!-- Integrasi CSS -->
-  <link rel="stylesheet" href="../Static/css/style.css">
+  <link rel="stylesheet" href=".{{ url_for('static', filename='css/style.css')}}">
   <style>
     * {
       margin: 0;
@@ -22,34 +22,6 @@
       background-color: #ffcc00; 
     }
 
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      padding: 15px;
-      background-color: #ffcc00; 
-      color: white;
-    }
-
-    .navbar-logo-group {
-      display: flex;
-      align-items: center;
-    }
-
-    .navbar-logo {
-      height: 50px; 
-      margin-right: 10px;
-    }
-
-    .navbar-title {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .navbar-list-group a {
-      color: black;
-      text-decoration: none;
-      margin-right: 15px;
-    }
 
     /* About Section */
     .about {
@@ -92,27 +64,7 @@
       color: black;
     }
 
-    /* Footer */
-    .footer {
-      background-color: #ffcc00;
-      color: black;
-      text-align: center;
-      padding: 20px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-    }
 
-    .footer a {
-      color: black;
-      text-decoration: none;
-      margin-right: 15px;
-    }
-
-    .footer span {
-      display: block;
-      margin-top: 10px;
-    }
   </style>
 
 </head>
@@ -121,16 +73,16 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="navbar-logo-group">
-        <img src="../Static/images/logo.png" alt="HonoCafe Logo" class="navbar-logo">
+        <img src=".{{ url_for('static', filename='images/logo.png')}}" alt="HonoCafe Logo" class="navbar-logo">
         <span class="navbar-title">HonoCafe</span>
     </div>
     
     <div class="navbar-list-group">
-      <a href="home.html">Home</a>
-      <a href="about.html">Tentang</a>
-      <a href="menu.html">Menu</a>
-      <a href="contact.html">Hubungi Kami</a>
-      <a href="download.html">Download Apps</a>   
+      <a href="http://127.0.0.1:5000/">Home</a>
+      <a href="http://127.0.0.1:5000/about">Tentang</a>
+      <a href="http://127.0.0.1:5000/menu">Menu</a>
+      <a href="http://127.0.0.1:5000/contact">Hubungi Kami</a>
+      <a href="http://127.0.0.1:5000/downloads">Download Apps</a> 
     </div>
   </nav>
 
@@ -145,7 +97,7 @@
         <p>Ketika matahari terbenam pada akhir minggu, Hono Cafe dipenuhi oleh tawa, musik, dan kebahagiaan. Acara tersebut tidak hanya mengumpulkan dana yang cukup untuk proyek taman bermain, tetapi juga menyatukan lebih erat lagi komunitas tersebut.</p>
       </div>
       <div class="about-image">
-        <img src="../Static/images/honocafe-about.jpg" alt="Cerita Tentang HonoCafe">
+        <img src=".{{ url_for('static', filename='images/honocafe-about.jpg')}}" alt="Cerita Tentang HonoCafe">
       </div>
     </div>
   </section>
@@ -153,11 +105,11 @@
   <!-- Footer -->
   <footer class="footer">
     <div>
-      <a href="home.html">Home</a>
-      <a href="#about">Tentang</a>
-      <a href="menu.html">Menu</a>
-      <a href="contact.html">Hubungi Kami</a>
-      <a href="download.html">Download Apps</a>
+      <a href="http://127.0.0.1:5000/">Home</a>
+      <a href="http://127.0.0.1:5000/about">Tentang</a>
+      <a href="http://127.0.0.1:5000/menu">Menu</a>
+      <a href="http://127.0.0.1:5000/contact">Hubungi Kami</a>
+      <a href="http://127.0.0.1:5000/downloads">Download Apps</a>
     </div>
     <span>created by <a href="KELOMPOK IV" target="_blank">KELOMPOK IV</a> | © 2024 HONOCAFE INDONESIA. All Rights Reserved</span>
   </footer>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hono Cafe - Menu</title>
-    <link rel="stylesheet" href="../Static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,17 +61,17 @@
     <nav class="navbar">
         <!-- Bagian kiri untuk logo dan teks HonoCafe -->
         <div class="navbar-logo-group">
-            <img src="../Static/images/logo.png" alt="HonoCafe Logo" class="navbar-logo">
+            <img src="{{ url_for('static', filename='images/logo.png')}}" alt="HonoCafe Logo" class="navbar-logo">
             <span class="navbar-title">HonoCafe</span>
         </div>
     
         <!-- Bagian kanan untuk link navigasi -->
         <div class="navbar-list-group">
-          <a href="home.html">Home</a>
-          <a href="about.html">Tentang</a>
-          <a href="menu.html">Menu</a>
-          <a href="contact.html">Hubungi Kami</a>
-          <a href="download.html">Download Apps</a>   
+            <a href="http://127.0.0.1:5000/">Home</a>
+            <a href="http://127.0.0.1:5000/about">Tentang</a>
+            <a href="http://127.0.0.1:5000/menu">Menu</a>
+            <a href="http://127.0.0.1:5000/contact">Hubungi Kami</a>
+            <a href="http://127.0.0.1:5000/downloads">Download Apps</a>  
         </div>
     </nav>
 
@@ -83,41 +83,52 @@
 
 <div class="menu-container">
     <div class="menu-item">
-        <img src="../Static/images/coffee.jpg" alt="Hono Cafe">
+        <img src="{{ url_for('static', filename='images/coffee.jpg')}}" alt="Hono Cafe">
         <h2>Hono Cafe</h2>
         <p>Price: 15,000</p>
         <p>Signature black coffee, taste the real coffee!!</p>
         <button>Order Now</button>
     </div>
     <div class="menu-item">
-        <img src="../Static/images/fruit-punch.jpg" alt="Hono Fruit Punch">
+        <img src="{{ url_for('static', filename='images/fruit-punch.jpg')}}" alt="Hono Fruit Punch">
         <h2>Hono Fruit Punch</h2>
         <p>Price: 20,000</p>
         <p> Yummy Fruit Punch made with love!</p>
         <button>Order Now</button>
     </div>
     <div class="menu-item">
-        <img src="../Static/images/butterfly-pea-tea.jpg" alt="Butterfly Pea Flower">
+        <img src="{{ url_for('static', filename='images/butterfly-pea-tea.jpg')}}" alt="Butterfly Pea Flower">
         <h2>Butterfly Pea Flower</h2>
         <p>Price: 15,000</p>
         <p>Tea dari bunga telang yang menyehatkan tubuh!!</p>
         <button>Order Now</button>
     </div>
     <div class="menu-item">
-        <img src="../Static/images/iced-matcha-latte.jpg" alt="Hono Matcha">
+        <img src="{{ url_for('static', filename='images/iced-matcha-latte.jpg')}}" alt="Hono Matcha">
         <h2>Hono Matcha</h2>
         <p>Price: 25,000</p>
         <p>Best matcha latte in the world!!</p>
         <button>Order Now</button>
     </div>
     <div class="menu-item">
-        <img src="../Static/images/coffe-latte.jpg" alt="Hono Latte">
+        <img src="{{ url_for('static', filename='images/coffe-latte.jpg')}}" alt="Hono Latte">
         <h2>Hono Latte</h2>
         <p>Price: 20,000</p>
         <p>Latte with an art!!</p>
         <button>Order Now</button>
     </div>
 </div>
+
+<footer class="footer">
+    <div>
+        <a href="http://127.0.0.1:5000/">Home</a>
+        <a href="http://127.0.0.1:5000/about">Tentang</a>
+        <a href="http://127.0.0.1:5000/menu">Menu</a>
+        <a href="http://127.0.0.1:5000/contact">Hubungi Kami</a>
+        <a href="http://127.0.0.1:5000/downloads">Download Apps</a>
+    </div>
+    <span>created by <a href="KELOMPOK IV" target="_blank">KELOMPOK IV</a> | © 2024 HONOCAFE INDONESIA. All Rights Reserved</span>
+  </footer>
 
 </body>
 </html>

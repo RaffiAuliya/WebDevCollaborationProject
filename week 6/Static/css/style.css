@@ -21,14 +21,14 @@
 }
 
 .navbar-title {
-	font-size: 18px; /* Ukuran font untuk judul navbar */
+	font-size: 24px; /* Ukuran font untuk judul navbar */
 	font-weight: bold; /* Menjadikan teks judul tebal */
 	color: #333; /* Warna teks judul navbar (abu-abu gelap) */
 }
 
 /* Styling untuk link navigasi */
 .navbar-list-group a {
-	color: #333; /* Warna link navigasi (abu-abu gelap) */
+	color: #000000; /* Warna link navigasi (abu-abu gelap) */
 	text-decoration: none; /* Menghilangkan garis bawah pada link */
 	margin-right: 15px; /* Jarak antar link navigasi */
 	font-size: 16px; /* Ukuran font untuk link navigasi */
