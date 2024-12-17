@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Image for Prediction</h1>
+        
+        <!-- Form untuk upload gambar -->
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="file" name="file" required>
+            <button type="submit">Upload</button>
+        </form>
+        
+        <!-- Tempat untuk menampilkan hasil prediksi -->
+        <h3>Prediction Result:</h3>
+        <p id="result">Please upload an image.</p>
+    </div>
+
+    <script>
+        // Fungsi untuk menangani form upload dan mendapatkan hasil prediksi
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah form submit secara default
+
+            // Ambil file dari input
+            var formData = new FormData();
+            formData.append("file", document.getElementById('file').files[0]);
+
+            // Kirim request ke backend untuk melakukan prediksi
+            fetch('/predict', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.predicted_class) {
+                    // Tampilkan hasil prediksi
+                    document.getElementById('result').innerText = 'Predicted Class: ' + data.predicted_class;
+                } else {
+                    document.getElementById('result').innerText = 'Error: ' + data.error;
+                }
+            })
+            .catch(error => {
+                document.getElementById('result').innerText = 'An error occurred.';
+            });
+        });
+    </script>
+</body>
+</html>
