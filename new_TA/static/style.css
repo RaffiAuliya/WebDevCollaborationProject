@@ -12,22 +12,126 @@ body {
     color: #333;
 }
 
+/* Header */
+header {
+    background-color: #009688; /* Warna telur bebek */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Ukuran logo */
+    height: auto;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d4f5d4;
+}
+
 /* Container utama */
 .container {
-    max-width: 800px;
-    margin: 50px auto;
     padding: 30px;
     background-color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    text-align: center;
 }
 
 /* Judul utama */
 h1 {
     font-size: 2.5rem;
-    color: #4CAF50;
-    margin-bottom: 30px;
+    color: #ffffff; /* Warna telur bebek */
+    margin-bottom: 10px;
+}
+
+/* Konten Beranda */
+.home-content h2 {
+    font-size: 2rem;
+    color: #009688; /* Warna telur bebek */
+    margin: 40px 0 20px; /* Jarak atas dan bawah */
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    color: #009688; /* Warna telur bebek */
+    margin: 40px 0 20px; /* Jarak atas dan bawah */
+}
+
+.upload-content h2 {
+    font-size: 2rem;
+    color: #009688; /* Warna telur bebek */
+    margin: 40px 0 20px; /* Jarak atas dan bawah */
+}
+
+.contact-content h2 {
+    font-size: 2rem;
+    color: #009688; /* Warna telur bebek */
+    margin: 40px 0 20px; /* Jarak atas dan bawah */
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Jarak antar kartu */
+    margin-bottom: 40px; /* Jarak bawah untuk memberikan ruang antara card dan judul konten setelahnya */
+}
+
+.card {
+    flex: 1 1 calc(30% - 20px); /* Ukuran kartu */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left; /* Rata kiri untuk teks */
+    transition: transform 0.3s; /* Efek hover */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efek angkat saat hover */
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px; /* Jarak antara gambar dan teks */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #009688; /* Warna telur bebek */
+    margin: 20px 0 10px; /* Jarak atas dan bawah */
+}
+
+
+.card p {
+    font-size: 1rem;
+    color: #555; /* Warna teks */
 }
 
 /* Form upload */
@@ -46,7 +150,7 @@ input[type="file"] {
 
 button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #009688; /* Warna telur bebek */
     border: none;
     border-radius: 5px;
     color: white;
@@ -56,14 +160,14 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #00796b; /* Warna lebih gelap saat hover */
 }
 
 /* Hasil prediksi */
 h3 {
     font-size: 1.5rem;
     color: #555;
-    margin-top: 20px;
+    margin: 20px 0 10px; /* Jarak atas dan bawah */
 }
 
 #result {
@@ -73,11 +177,39 @@ h3 {
     color: #333;
 }
 
+/* Footer */
+footer {
+    background-color: #009688; /* Warna telur bebek */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 100%; /* Mengatur lebar footer penuh */
+    margin: 0 auto;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #d4f5d4;
+}
+
 /* Responsivitas */
 @media (max-width: 600px) {
     .container {
         padding: 15px;
-        width: 95%;
+        width: 100%; /* Mengatur lebar penuh untuk tampilan kecil */
     }
 
     h1 {
@@ -87,4 +219,50 @@ h3 {
     input[type="file"], button {
         width: 100%;
     }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+}
+
+/* Tambahan untuk konten kontak */
+.contact-content {
+    margin: 20px 0;
+}
+
+.contact-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-content label {
+    margin: 10px 0 5px;
+}
+
+.contact-content input, 
+.contact-content textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-content button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #009688; /* Warna telur bebek */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-content button:hover {
+    background-color: #00796b; /* Warna lebih gelap saat hover */
 }

@@ -1,36 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Model Prediction</title>
+    <title>Model Prediksi</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" />
+            <h1>Deteksi Gigi Berbasis AI</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#upload">Layanan</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="container">
-        <h1>Upload Image for Prediction</h1>
-        
-        <!-- Form untuk upload gambar -->
-        <form id="uploadForm" enctype="multipart/form-data">
-            <input type="file" id="file" name="file" required>
-            <button type="submit">Upload</button>
-        </form>
-        
-        <!-- Tempat untuk menampilkan hasil prediksi -->
-        <h3>Prediction Result:</h3>
-        <p id="result">Please upload an image.</p>
+        <!-- Konten Beranda -->
+        <section id="home" class="home-content">
+            <h2>Selamat Datang di Deteksi Gigi Berbasis AI</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200" alt="Gigi Sehat" />
+                    <h3>Identifikasi Kondisi Gigi</h3>
+                    <p>
+                        Aplikasi kami memanfaatkan teknologi AI canggih untuk membantu Anda mengidentifikasi berbagai kondisi gigi 
+                        berdasarkan gambar yang Anda unggah. Apakah itu kalkulus, gingivitis, atau perubahan warna gigi, model kami dilatih untuk memberikan prediksi yang akurat untuk membantu Anda dalam perjalanan kesehatan gigi Anda.
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200" alt="Proses Analisis" />
+                    <h3>Analisis Gigi Anda</h3>
+                    <p>
+                        Cukup unggah gambar gigi Anda, dan AI kami akan menganalisisnya untuk memberikan wawasan 
+                        tentang kesehatan gigi Anda. Harap diingat bahwa alat ini bukan pengganti nasihat profesional 
+                        kedokteran gigi, tetapi bisa menjadi sumber yang berguna untuk deteksi dini.
+                    </p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x200" alt="Layanan Kami" />
+                    <h3>Layanan Kami</h3>
+                    <p>
+                        Jelajahi layanan kami dan pelajari lebih lanjut tentang bagaimana kami dapat membantu Anda 
+                        dalam menjaga senyum yang sehat! Kami berkomitmen untuk memberikan informasi yang akurat dan bermanfaat.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Konten Tentang -->
+<section id="about" class="about-content">
+    <h2>Tentang Penyakit Gigi</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Kalkulus" />
+            <h3>Kalkulus</h3>
+            <p>Juga dikenal sebagai tartar, kalkulus adalah plak yang mengeras yang terbentuk di gigi. Ini dapat menyebabkan penyakit gusi jika tidak dihilangkan melalui pembersihan profesional.</p>
+            <h4>Informasi Tambahan:</h4>
+            <p>Kalkulus dapat menyebabkan peradangan gusi dan meningkatkan risiko penyakit gusi yang lebih serius.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Karies Gigi" />
+            <h3>Karies Gigi</h3>
+            <p>Umumnya disebut sebagai lubang, karies adalah area kerusakan pada gigi yang disebabkan oleh bakteri yang memproduksi asam dari gula.</p>
+            <h4>Informasi Tambahan:</h4>
+            <p>Pencegahan karies dapat dilakukan dengan menyikat gigi secara teratur dan menghindari makanan manis.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Gingivitis" />
+            <h3>Gingivitis</h3>
+            <p>Ini adalah peradangan gusi, sering disebabkan oleh penumpukan plak. Gejalanya termasuk kemerahan, pembengkakan, dan pendarahan saat menyikat gigi.</p>
+            <h4>Informasi Tambahan:</h4>
+            <p>Gingivitis dapat diobati dengan perawatan gigi yang baik dan pembersihan profesional.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Discolorasi Gigi" />
+            <h3>Discolorasi Gigi</h3>
+            <p>Kondisi ini dapat terjadi karena berbagai faktor, termasuk noda dari makanan dan minuman, merokok, atau obat-obatan tertentu.</p>
+            <h4>Informasi Tambahan:</h4>
+            <p>Perawatan pemutihan gigi dapat membantu mengurangi discolorasi.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Radang Mulut" />
+            <h3>Radang Mulut</h3>
+            <p>Ini adalah luka menyakitkan yang dapat muncul di dalam mulut, sering disebabkan oleh stres, cedera, atau kondisi medis tertentu.</p>
+            <h4>Informasi Tambahan:</h4>
+            <p>Radang mulut dapat diobati dengan obat kumur antiseptik dan menjaga kebersihan mulut yang baik.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x200" alt="Hipodontia" />
+            <h3>Hipodontia</h3>
+            <p>Ini adalah kondisi di mana satu atau lebih gigi hilang karena masalah perkembangan. Ini dapat mempengaruhi baik gigi susu maupun gigi permanen.</p>
+            <h4>Informasi Tambahan:</h4>
+            <p>Perawatan ortodontik atau prostetik mungkin diperlukan untuk mengatasi hipodontia.</p>
+        </div>
+    </div>
+</section>
+        <!-- Konten layanan -->
+        <section id="upload" class="upload-content">
+            <h2>Unggah Gambar untuk Prediksi</h2>
+            <div class="card">
+                <p>
+                    Untuk mendapatkan prediksi tentang kondisi gigi Anda, silakan unggah gambar gigi Anda di bawah ini. 
+                    Pastikan gambar yang diunggah jelas dan terlihat dengan baik agar model AI kami dapat memberikan analisis yang akurat.
+                </p>
+                <p>
+                    Ikuti langkah-langkah berikut untuk mengunggah gambar:
+                </p>
+                <ol>
+                    <li>Klik tombol "Pilih File" untuk memilih gambar dari perangkat Anda.</li>
+                    <li>Pastikan gambar yang Anda pilih memiliki resolusi yang baik dan tidak buram.</li>
+                    <li>Setelah memilih gambar, klik tombol "Unggah" untuk mengirim gambar ke sistem kami.</li>
+                </ol>
+                <p>
+                    Setelah gambar diunggah, Anda akan menerima hasil prediksi dalam beberapa detik. 
+                    Harap diingat bahwa hasil ini bukan pengganti nasihat profesional dari dokter gigi.
+                </p>
+
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <input type="file" id="file" name="file" required>
+                    <button type="submit">Unggah</button>
+                </form>
+                
+                <h3> Hasil Prediksi:</h3>
+                <p id="result">Silakan unggah gambar.</p>
+            </div>
+        </section>
+
+        <!-- Konten Kontak -->
+        <section id="contact" class="contact-content">
+            <h2>Kontak Kami</h2>
+            <div class="card">
+                <p>Jika Anda memiliki pertanyaan atau ingin mendapatkan informasi lebih lanjut, silakan hubungi kami melalui formulir di bawah ini:</p>
+                
+                <form id="contactForm">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Kirim</button>
+                </form>
+
+                <h3>Informasi Kontak Lainnya:</h3>
+                <p>Email: info@deteksigigi.com</p>
+                <p>Telepon: +62 123 456 789</p>
+                <p>Alamat: Jl. Kesehatan No. 123, Jakarta, Indonesia</p>
+            </div>
+        </section>
     </div>
 
-    <script>
-        // Fungsi untuk menangani form upload dan mendapatkan hasil prediksi
-        document.getElementById('uploadForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Mencegah form submit secara default
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Deteksi Gigi Berbasis AI. Semua hak dilindungi.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
 
-            // Ambil file dari input
+    <script>
+        // Menangani pengunggahan gambar untuk prediksi
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
             var formData = new FormData();
             formData.append("file", document.getElementById('file').files[0]);
 
-            // Kirim request ke backend untuk melakukan prediksi
             fetch('/predict', {
                 method: 'POST',
                 body: formData
@@ -38,14 +187,60 @@
             .then(response => response.json())
             .then(data => {
                 if (data.predicted_class) {
-                    // Tampilkan hasil prediksi
-                    document.getElementById('result').innerText = 'Predicted Class: ' + data.predicted_class;
+                    document.getElementById('result').innerText = 'Kelas yang Diprediksi: ' + data.predicted_class;
                 } else {
-                    document.getElementById('result').innerText = 'Error: ' + data.error;
+                    document.getElementById('result').innerText = 'Kesalahan: ' + data.error;
                 }
             })
             .catch(error => {
-                document.getElementById('result').innerText = 'An error occurred.';
+                document.getElementById('result').innerText = 'Terjadi kesalahan.';
+            });
+        });
+
+        // Menangani pengiriman formulir kontak
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var contactData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            fetch('/send_contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(contactData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Pesan Anda telah dikirim!');
+                    document.getElementById('contactForm').reset();
+                } else {
+                    alert('Kesalahan: ' + data.error);
+                }
+            })
+            .catch(error => {
+                alert('Terjadi kesalahan saat mengirim pesan.');
+            });
+        });
+
+        // Smooth Scrolling
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>

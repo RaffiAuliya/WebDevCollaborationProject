@@ -1,6 +1,6 @@
 import os
 import numpy as np
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, flash
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
@@ -8,13 +8,16 @@ from tensorflow.keras.preprocessing.image import img_to_array
 
 # Inisialisasi Flask app
 app = Flask(__name__)
+app.secret_key = 'your_secret_key'  # Ganti dengan kunci rahasia Anda
+UPLOAD_FOLDER = 'static/uploads/'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Load model .keras
 model = load_model('Model_MobileNetV2.keras')
 
-# Path folder untuk template
-UPLOAD_FOLDER = 'uploads/'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+# Pastikan folder upload ada
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
 
 # Fungsi untuk memproses dan memprediksi gambar
 def predict_image(img_path):
@@ -48,11 +51,17 @@ def predict():
         filepath = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
         file.save(filepath)
 
+        # Debug: Cek apakah file disimpan
+        print(f"File disimpan di: {filepath}")
+
         # Prediksi kelas gambar
         predicted_class = predict_image(filepath)
         
+        # Debug: Cek kelas yang diprediksi
+        print(f"Kelas yang diprediksi: {predicted_class}")
+        
         # Kembalikan hasil prediksi
-        class_labels = ['Calculus', 'Data caries', 'Gingivitis', 'Tooth Discoloration', 'Mouth Ulcer', 'Hypodontia']  # Gantilah dengan label kelas yang sesuai
+        class_labels = ['Calculus', 'Data caries', 'Gingivitis', 'Tooth Discoloration', 'Mouth Ulcer', 'Hypodontia']
         predicted_label = class_labels[predicted_class]
         
         return jsonify({'predicted_class': predicted_label})
@@ -60,5 +69,3 @@ def predict():
 # Menjalankan Flask app
 if __name__ == "__main__":
     app.run(debug=True, port=8000)
-    
-
